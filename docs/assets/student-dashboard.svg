@@ -1,0 +1,285 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F6FF"/>
+      <stop offset="1" stop-color="#EFF1FF"/>
+    </linearGradient>
+    <linearGradient id="sidebar" x1="0" y1="0" x2="350" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6A45D1"/>
+      <stop offset="1" stop-color="#5140C1"/>
+    </linearGradient>
+    <linearGradient id="topbar" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#2C2D36"/>
+      <stop offset="1" stop-color="#1E2027"/>
+    </linearGradient>
+    <linearGradient id="cardShadow" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="1" stop-color="#EDF0FF"/>
+    </linearGradient>
+    <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFB081" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#FFB081" stop-opacity="0.04"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#2B2E5B" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" rx="18" fill="url(#bg)"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="340" height="900" rx="18" fill="url(#sidebar)"/>
+  <rect x="20" y="108" width="38" height="38" rx="12" fill="#FF8B60"/>
+  <text x="39" y="132" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">K</text>
+  <text x="70" y="138" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800">Know Envi</text>
+
+  <text x="18" y="188" fill="#22202E" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Login</text>
+  <text x="16" y="236" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Username</text>
+  <rect x="16" y="248" width="300" height="50" rx="10" fill="#11131A"/>
+  <text x="30" y="279" fill="#B7B8BF" font-family="Arial, Helvetica, sans-serif" font-size="16">teacher or student</text>
+
+  <text x="16" y="342" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Password</text>
+  <rect x="16" y="354" width="300" height="50" rx="10" fill="#11131A"/>
+  <text x="30" y="385" fill="#B7B8BF" font-family="Arial, Helvetica, sans-serif" font-size="16">Enter password</text>
+  <circle cx="292" cy="379" r="11" fill="#ffffff"/>
+  <path d="M284 379c6-10 14-10 20 0" stroke="#11131A" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="292" cy="379" r="4" fill="#11131A"/>
+
+  <text x="16" y="458" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Role</text>
+  <circle cx="27" cy="495" r="10" fill="#FF6B55"/>
+  <circle cx="105" cy="495" r="10" fill="#1C1B22" stroke="#B9BAFF" stroke-opacity="0.2"/>
+  <text x="49" y="501" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="16">Teacher</text>
+  <text x="127" y="501" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="16">Student</text>
+
+  <rect x="16" y="536" width="144" height="48" rx="12" fill="#2C2D36"/>
+  <rect x="172" y="536" width="144" height="48" rx="12" fill="#2C2D36"/>
+  <text x="88" y="566" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Login</text>
+  <text x="244" y="566" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Logout</text>
+  <text x="16" y="614" fill="#CFCDF7" font-family="Arial, Helvetica, sans-serif" font-size="14">Current role: Guest</text>
+
+  <line x1="16" y1="676" x2="316" y2="676" stroke="#E7E2FF" stroke-opacity="0.18"/>
+  <text x="16" y="724" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Institution</text>
+  <circle cx="27" cy="761" r="10" fill="#FF6B55"/>
+  <circle cx="27" cy="807" r="10" fill="#1C1B22" stroke="#B9BAFF" stroke-opacity="0.2"/>
+  <text x="49" y="767" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="16">School</text>
+  <text x="49" y="813" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="16">College</text>
+
+  <text x="16" y="861" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Menu</text>
+  <circle cx="27" cy="899" r="10" fill="#FF6B55"/>
+  <text x="49" y="905" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="16">Dashboard</text>
+
+  <!-- Main area -->
+  <text x="405" y="83" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800">Dashboard</text>
+  <rect x="865" y="36" width="406" height="48" rx="12" fill="url(#topbar)"/>
+  <text x="882" y="65" fill="#A9A7B4" font-family="Arial, Helvetica, sans-serif" font-size="17">Search here...</text>
+  <circle cx="1388" cy="60" r="20" fill="#ffffff"/>
+  <text x="1388" y="67" text-anchor="middle" fill="#7B63F7" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">!</text>
+  <circle cx="1442" cy="60" r="20" fill="#ffffff"/>
+  <text x="1442" y="67" text-anchor="middle" fill="#7B63F7" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">⚙</text>
+  <text x="1484" y="52" fill="#4B5376" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Nabila A.</text>
+  <text x="1484" y="75" fill="#7A83A8" font-family="Arial, Helvetica, sans-serif" font-size="15">Admin</text>
+  <circle cx="1562" cy="60" r="21" fill="#7B54F7"/>
+  <text x="1562" y="68" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">NA</text>
+
+  <!-- Stat cards -->
+  <g filter="url(#softShadow)">
+    <rect x="405" y="108" width="314" height="95" rx="24" fill="url(#cardShadow)"/>
+    <rect x="741" y="108" width="314" height="95" rx="24" fill="url(#cardShadow)"/>
+    <rect x="1077" y="108" width="314" height="95" rx="24" fill="url(#cardShadow)"/>
+    <rect x="1413" y="108" width="314" height="95" rx="24" fill="url(#cardShadow)"/>
+  </g>
+  <circle cx="451" cy="156" r="26" fill="#6564E6"/>
+  <text x="451" y="163" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">A</text>
+  <text x="500" y="136" fill="#8B92BF" font-family="Arial, Helvetica, sans-serif" font-size="16">Students</text>
+  <text x="500" y="171" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800">500</text>
+
+  <circle cx="787" cy="156" r="26" fill="#FF7D53"/>
+  <text x="787" y="163" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">T</text>
+  <text x="836" y="136" fill="#8B92BF" font-family="Arial, Helvetica, sans-serif" font-size="16">Teachers</text>
+  <text x="836" y="171" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800">12</text>
+
+  <circle cx="1123" cy="156" r="26" fill="#FFD15B"/>
+  <text x="1123" y="163" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">E</text>
+  <text x="1172" y="136" fill="#8B92BF" font-family="Arial, Helvetica, sans-serif" font-size="16">Events</text>
+  <text x="1172" y="171" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800">4</text>
+
+  <circle cx="1459" cy="156" r="26" fill="#43C2F3"/>
+  <text x="1459" y="163" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">₹</text>
+  <text x="1508" y="136" fill="#8B92BF" font-family="Arial, Helvetica, sans-serif" font-size="16">Fees</text>
+  <text x="1508" y="171" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800">843k</text>
+
+  <!-- Main chart -->
+  <text x="405" y="245" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">School Performance</text>
+  <g filter="url(#softShadow)">
+    <rect x="405" y="272" width="812" height="394" rx="18" fill="#ffffff"/>
+  </g>
+  <g opacity="0.9">
+    <line x1="465" y1="302" x2="465" y2="626" stroke="#E2E4F0"/>
+    <line x1="546" y1="302" x2="546" y2="626" stroke="#E2E4F0"/>
+    <line x1="627" y1="302" x2="627" y2="626" stroke="#E2E4F0"/>
+    <line x1="708" y1="302" x2="708" y2="626" stroke="#E2E4F0"/>
+    <line x1="789" y1="302" x2="789" y2="626" stroke="#E2E4F0"/>
+    <line x1="870" y1="302" x2="870" y2="626" stroke="#E2E4F0"/>
+    <line x1="951" y1="302" x2="951" y2="626" stroke="#E2E4F0"/>
+    <line x1="1032" y1="302" x2="1032" y2="626" stroke="#E2E4F0"/>
+    <line x1="1113" y1="302" x2="1113" y2="626" stroke="#E2E4F0"/>
+    <line x1="1194" y1="302" x2="1194" y2="626" stroke="#E2E4F0"/>
+    <line x1="465" y1="626" x2="1194" y2="626" stroke="#D2D5E3" stroke-width="2"/>
+    <line x1="465" y1="557" x2="1194" y2="557" stroke="#EEF0F8"/>
+    <line x1="465" y1="488" x2="1194" y2="488" stroke="#EEF0F8"/>
+    <line x1="465" y1="419" x2="1194" y2="419" stroke="#EEF0F8"/>
+    <line x1="465" y1="350" x2="1194" y2="350" stroke="#EEF0F8"/>
+  </g>
+  <text x="434" y="627" fill="#666D84" font-family="Arial, Helvetica, sans-serif" font-size="15">June</text>
+  <text x="514" y="627" fill="#666D84" font-family="Arial, Helvetica, sans-serif" font-size="15">July</text>
+  <text x="593" y="627" fill="#666D84" font-family="Arial, Helvetica, sans-serif" font-size="15">August</text>
+  <text x="678" y="627" fill="#666D84" font-family="Arial, Helvetica, sans-serif" font-size="15">September</text>
+  <text x="768" y="627" fill="#666D84" font-family="Arial, Helvetica, sans-serif" font-size="15">October</text>
+  <text x="850" y="627" fill="#666D84" font-family="Arial, Helvetica, sans-serif" font-size="15">November</text>
+  <text x="933" y="627" fill="#666D84" font-family="Arial, Helvetica, sans-serif" font-size="15">December</text>
+  <text x="1018" y="627" fill="#666D84" font-family="Arial, Helvetica, sans-serif" font-size="15">January</text>
+  <text x="1100" y="627" fill="#666D84" font-family="Arial, Helvetica, sans-serif" font-size="15">February</text>
+  <text x="1188" y="627" fill="#666D84" font-family="Arial, Helvetica, sans-serif" font-size="15">March</text>
+
+  <path d="M465 563C546 553 627 548 708 541C789 535 870 526 951 516C1032 507 1113 499 1194 494" stroke="#FF7D53" stroke-width="4" stroke-linecap="round"/>
+  <path d="M465 563C546 558 627 555 708 548C789 542 870 538 951 531C1032 527 1113 520 1194 514" stroke="#FFBF3F" stroke-width="4" stroke-linecap="round"/>
+  <path d="M465 563C546 553 627 548 708 541C789 535 870 526 951 516C1032 507 1113 499 1194 494V626H465Z" fill="url(#chartFill)"/>
+  <circle cx="465" cy="563" r="4" fill="#FF7D53"/>
+  <circle cx="546" cy="553" r="4" fill="#FF7D53"/>
+  <circle cx="627" cy="548" r="4" fill="#FF7D53"/>
+  <circle cx="708" cy="541" r="4" fill="#FF7D53"/>
+  <circle cx="789" cy="535" r="4" fill="#FF7D53"/>
+  <circle cx="870" cy="526" r="4" fill="#FF7D53"/>
+  <circle cx="951" cy="516" r="4" fill="#FF7D53"/>
+  <circle cx="1032" cy="507" r="4" fill="#FF7D53"/>
+  <circle cx="1113" cy="499" r="4" fill="#FF7D53"/>
+  <circle cx="1194" cy="494" r="4" fill="#FF7D53"/>
+
+  <circle cx="465" cy="563" r="4" fill="#FFBF3F"/>
+  <circle cx="546" cy="558" r="4" fill="#FFBF3F"/>
+  <circle cx="627" cy="555" r="4" fill="#FFBF3F"/>
+  <circle cx="708" cy="548" r="4" fill="#FFBF3F"/>
+  <circle cx="789" cy="542" r="4" fill="#FFBF3F"/>
+  <circle cx="870" cy="538" r="4" fill="#FFBF3F"/>
+  <circle cx="951" cy="531" r="4" fill="#FFBF3F"/>
+  <circle cx="1032" cy="527" r="4" fill="#FFBF3F"/>
+  <circle cx="1113" cy="520" r="4" fill="#FFBF3F"/>
+  <circle cx="1194" cy="514" r="4" fill="#FFBF3F"/>
+
+  <!-- Right column card -->
+  <g filter="url(#softShadow)">
+    <rect x="1250" y="223" width="360" height="504" rx="26" fill="#ffffff"/>
+  </g>
+  <text x="1270" y="272" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Recent Students</text>
+  <text x="1270" y="308" fill="#E7E9F8" font-family="Arial, Helvetica, sans-serif" font-size="16">You have 5 students</text>
+
+  <g>
+    <circle cx="1287" cy="370" r="22" fill="#FF4747"/><text x="1287" y="377" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">SR</text>
+    <text x="1330" y="362" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Shreya Reddy</text>
+    <text x="1330" y="384" fill="#9BA3C2" font-family="Arial, Helvetica, sans-serif" font-size="14">IX A</text>
+    <circle cx="1568" cy="370" r="18" fill="#F8F8FF"/><text x="1568" y="376" text-anchor="middle" fill="#7B63F7" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">?</text>
+    <line x1="1270" y1="396" x2="1590" y2="396" stroke="#EEF0FB"/>
+
+    <circle cx="1287" cy="430" r="22" fill="#FF4747"/><text x="1287" y="437" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">ZN</text>
+    <text x="1330" y="422" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Zoya Nair</text>
+    <text x="1330" y="444" fill="#9BA3C2" font-family="Arial, Helvetica, sans-serif" font-size="14">XI A</text>
+    <circle cx="1568" cy="430" r="18" fill="#F8F8FF"/><text x="1568" y="436" text-anchor="middle" fill="#7B63F7" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">?</text>
+    <line x1="1270" y1="456" x2="1590" y2="456" stroke="#EEF0FB"/>
+
+    <circle cx="1287" cy="490" r="22" fill="#6564E6"/><text x="1287" y="497" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">KT</text>
+    <text x="1330" y="482" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Kabir Ravi T</text>
+    <text x="1330" y="504" fill="#9BA3C2" font-family="Arial, Helvetica, sans-serif" font-size="14">XI A</text>
+    <circle cx="1568" cy="490" r="18" fill="#F8F8FF"/><text x="1568" y="496" text-anchor="middle" fill="#7B63F7" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">?</text>
+    <line x1="1270" y1="516" x2="1590" y2="516" stroke="#EEF0FB"/>
+
+    <circle cx="1287" cy="550" r="22" fill="#FFCE54"/><text x="1287" y="557" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">AB</text>
+    <text x="1330" y="542" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Arjun B</text>
+    <text x="1330" y="564" fill="#9BA3C2" font-family="Arial, Helvetica, sans-serif" font-size="14">X D</text>
+    <circle cx="1568" cy="550" r="18" fill="#F8F8FF"/><text x="1568" y="556" text-anchor="middle" fill="#7B63F7" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">?</text>
+    <line x1="1270" y1="576" x2="1590" y2="576" stroke="#EEF0FB"/>
+
+    <circle cx="1287" cy="610" r="22" fill="#4BC0F0"/><text x="1287" y="617" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">RD</text>
+    <text x="1330" y="602" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Riya Das</text>
+    <text x="1330" y="624" fill="#9BA3C2" font-family="Arial, Helvetica, sans-serif" font-size="14">IX C</text>
+    <circle cx="1568" cy="610" r="18" fill="#F8F8FF"/><text x="1568" y="616" text-anchor="middle" fill="#7B63F7" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">?</text>
+  </g>
+
+  <rect x="1270" y="658" width="320" height="64" rx="32" fill="#E7E3FF"/>
+  <text x="1430" y="699" text-anchor="middle" fill="#5B47D8" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">View More</text>
+
+  <!-- Lower cards -->
+  <g filter="url(#softShadow)">
+    <rect x="405" y="708" width="370" height="192" rx="24" fill="#ffffff"/>
+    <rect x="807" y="708" width="370" height="192" rx="24" fill="#ffffff"/>
+    <rect x="1250" y="742" width="360" height="158" rx="24" fill="#ffffff"/>
+  </g>
+  <text x="430" y="752" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">School Calendar</text>
+  <text x="705" y="752" fill="#9BA3C2" font-family="Arial, Helvetica, sans-serif" font-size="16">May 2026</text>
+
+  <text x="430" y="794" fill="#9BA3C2" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">Sun</text>
+  <text x="485" y="794" fill="#9BA3C2" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">Mon</text>
+  <text x="543" y="794" fill="#9BA3C2" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">Tue</text>
+  <text x="596" y="794" fill="#9BA3C2" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">Wed</text>
+  <text x="651" y="794" fill="#9BA3C2" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">Thu</text>
+  <text x="705" y="794" fill="#9BA3C2" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">Fri</text>
+  <text x="756" y="794" fill="#9BA3C2" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">Sat</text>
+  <g fill="none" stroke="#DCE1F8">
+    <rect x="428" y="807" width="40" height="60" rx="12"/>
+    <rect x="480" y="807" width="40" height="60" rx="12"/>
+    <rect x="532" y="807" width="40" height="60" rx="12"/>
+    <rect x="584" y="807" width="40" height="60" rx="12"/>
+    <rect x="636" y="807" width="40" height="60" rx="12"/>
+    <rect x="688" y="807" width="40" height="60" rx="12"/>
+    <rect x="740" y="807" width="40" height="60" rx="12"/>
+    <rect x="428" y="877" width="40" height="60" rx="12"/>
+    <rect x="480" y="877" width="40" height="60" rx="12"/>
+    <rect x="532" y="877" width="40" height="60" rx="12"/>
+    <rect x="584" y="877" width="40" height="60" rx="12"/>
+    <rect x="636" y="877" width="40" height="60" rx="12"/>
+    <rect x="688" y="877" width="40" height="60" rx="12"/>
+    <rect x="740" y="877" width="40" height="60" rx="12"/>
+  </g>
+  <text x="645" y="833" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">1</text>
+  <text x="697" y="833" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">2</text>
+  <text x="749" y="833" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">3</text>
+  <text x="433" y="903" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">4</text>
+  <text x="485" y="903" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">5</text>
+  <text x="537" y="903" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">6</text>
+  <text x="589" y="903" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">7</text>
+  <text x="641" y="903" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">8</text>
+  <text x="693" y="903" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">9</text>
+  <text x="744" y="903" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">10</text>
+
+  <text x="830" y="752" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">School Finance</text>
+  <rect x="827" y="784" width="340" height="160" rx="16" fill="#FAFBFF"/>
+  <line x1="862" y1="792" x2="862" y2="944" stroke="#E5E8F7"/>
+  <line x1="909" y1="792" x2="909" y2="944" stroke="#E5E8F7"/>
+  <line x1="956" y1="792" x2="956" y2="944" stroke="#E5E8F7"/>
+  <line x1="1003" y1="792" x2="1003" y2="944" stroke="#E5E8F7"/>
+  <line x1="1050" y1="792" x2="1050" y2="944" stroke="#E5E8F7"/>
+  <line x1="1097" y1="792" x2="1097" y2="944" stroke="#E5E8F7"/>
+  <line x1="1144" y1="792" x2="1144" y2="944" stroke="#E5E8F7"/>
+  <rect x="843" y="815" width="18" height="129" fill="#FF7D53"/>
+  <rect x="867" y="845" width="18" height="99" fill="#FFD15B"/>
+  <rect x="914" y="843" width="18" height="101" fill="#FF7D53"/>
+  <rect x="938" y="873" width="18" height="71" fill="#FFD15B"/>
+  <rect x="985" y="883" width="18" height="61" fill="#FF7D53"/>
+  <rect x="1009" y="894" width="18" height="50" fill="#FFD15B"/>
+  <rect x="1056" y="859" width="18" height="85" fill="#FF7D53"/>
+  <rect x="1080" y="864" width="18" height="80" fill="#FFD15B"/>
+  <rect x="1127" y="843" width="18" height="101" fill="#FF7D53"/>
+  <rect x="1151" y="867" width="18" height="77" fill="#FFD15B"/>
+
+  <text x="1272" y="788" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Messages</text>
+  <g>
+    <circle cx="1288" cy="833" r="21" fill="#FF4747"/><text x="1288" y="839" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">SR</text>
+    <text x="1330" y="824" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Shreya Reddy</text>
+    <text x="1330" y="846" fill="#8B92BF" font-family="Arial, Helvetica, sans-serif" font-size="14">Dimitres Viga: Please review the latest assessment update.</text>
+    <text x="1560" y="824" fill="#8B92BF" font-family="Arial, Helvetica, sans-serif" font-size="14">12:15 PM</text>
+    <line x1="1270" y1="868" x2="1590" y2="868" stroke="#EEF0FB"/>
+    <circle cx="1288" cy="905" r="21" fill="#FF4747"/><text x="1288" y="911" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">ZN</text>
+    <text x="1330" y="896" fill="#1B2C69" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Zoya Nair</text>
+    <text x="1330" y="918" fill="#8B92BF" font-family="Arial, Helvetica, sans-serif" font-size="14">Tom Housenburg: Attendance report has been published.</text>
+    <text x="1560" y="896" fill="#8B92BF" font-family="Arial, Helvetica, sans-serif" font-size="14">13:45 PM</text>
+  </g>
+</svg>
