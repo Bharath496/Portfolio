@@ -285,12 +285,6 @@ h4 {
   color: #d6d6d6;
 }
 
-@media (max-width: 768px) {
-  body {
-    padding-left: 0 !important;
-    padding-bottom: 90px !important;
-  }
-}
 
 .case-studies {
   display: grid;
@@ -709,6 +703,27 @@ h4 {
 }
 
 @media (max-width: 780px) {
+  body {
+    padding-left: 0 !important;
+    padding-bottom: 90px !important;
+  }
+
+  .side-rail {
+    top: auto;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: row;
+    padding: 10px 16px;
+    width: max-content;
+    border-radius: 999px;
+  }
+
+  .side-rail a:hover,
+  .side-rail a:focus-visible {
+    transform: translateY(-2px);
+  }
 
   .hero {
     padding-top: 34px;
