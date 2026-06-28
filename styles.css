@@ -285,6 +285,13 @@ h4 {
   color: #d6d6d6;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding-left: 0 !important;
+    padding-bottom: 90px !important;
+  }
+}
+
 .case-studies {
   display: grid;
   gap: 54px;
