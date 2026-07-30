@@ -370,7 +370,7 @@ h4 {
   margin-top: 18px;
   max-width: 52ch;
   font-family: "IBM Plex Mono", monospace;
-  color: #8f8f8f;
+  color: #4a4a4a;
   font-size: 1rem;
 }
 
@@ -538,7 +538,7 @@ h4 {
 .recent-card p {
   margin-top: 16px;
   font-family: "IBM Plex Mono", monospace;
-  color: #8c8c8c;
+  color: #4a4a4a;
   max-width: 38ch;
 }
 

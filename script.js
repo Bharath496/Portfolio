@@ -66,3 +66,30 @@ if (introElement) {
   };
   setTimeout(typeWriter, 800);
 }
+
+// 3D Tilt Effect for project cards
+const tiltElements = document.querySelectorAll('.case-media, .recent-media, .approach-card');
+
+tiltElements.forEach(el => {
+  el.addEventListener('mousemove', e => {
+    const rect = el.getBoundingClientRect();
+    const x = e.clientX - rect.left; // x position within the element
+    const y = e.clientY - rect.top;  // y position within the element
+    
+    const xPct = x / rect.width - 0.5;
+    const yPct = y / rect.height - 0.5;
+    
+    const xRotation = yPct * -12; // max rotation degrees
+    const yRotation = xPct * 12;
+    
+    el.style.transform = `perspective(1000px) rotateX(${xRotation}deg) rotateY(${yRotation}deg) scale3d(1.02, 1.02, 1.02)`;
+    el.style.transition = 'none';
+    el.style.zIndex = '10';
+  });
+  
+  el.addEventListener('mouseleave', () => {
+    el.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+    el.style.transition = 'transform 0.5s ease';
+    el.style.zIndex = '1';
+  });
+});
