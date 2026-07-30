@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -68,7 +69,9 @@ h4 {
   gap: 10px;
   padding: 12px;
   border-radius: 18px;
-  background: rgba(18, 18, 18, 0.72);
+  background: rgba(18, 18, 18, 0.52);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: var(--shadow-card);
   opacity: 1;
@@ -89,12 +92,20 @@ h4 {
   transition: transform 180ms ease, color 180ms ease, background-color 180ms ease, border-color 180ms ease;
 }
 
-.side-rail a:hover,
+.side-rail a:hover {
+  transform: translateX(2px);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
 .side-rail a:focus-visible {
   transform: translateX(2px);
   color: #fff;
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.08);
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
 }
 
 .side-rail-divider {
@@ -144,6 +155,12 @@ h4 {
   min-height: 48px;
 }
 
+@keyframes pulseGlow {
+  0% { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2); }
+  50% { box-shadow: 0 4px 24px rgba(83, 163, 0, 0.35); }
+  100% { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2); }
+}
+
 .cta {
   display: inline-flex;
   align-items: center;
@@ -161,12 +178,14 @@ h4 {
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
   transition: transform 180ms ease, box-shadow 180ms ease;
+  animation: pulseGlow 3s infinite alternate;
 }
 
 .cta:hover,
 .cta:focus-visible {
   transform: translateY(-1px);
   box-shadow: var(--shadow-green);
+  animation: none;
 }
 
 .cta:active {
@@ -253,10 +272,10 @@ h4 {
 
 .worked-grid div:hover {
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(83, 163, 0, 0.5);
+  background: rgba(83, 163, 0, 0.08);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 16px rgba(83, 163, 0, 0.15);
 }
 
 .section-heading {
@@ -422,10 +441,16 @@ h4 {
   background: #f4f6ff;
 }
 
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .media-3 {
-  background:
-    linear-gradient(135deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)),
-    linear-gradient(135deg, #1f1f1f 0%, #4a5568 55%, #9b6b4d 100%);
+  background: linear-gradient(135deg, #1f1f1f, #4a5568, #9b6b4d, #1f1f1f);
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
 }
 
 .approach-grid {
@@ -494,15 +519,15 @@ h4 {
 }
 
 .media-4 {
-  background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)),
-    linear-gradient(135deg, #111827 0%, #6b7280 50%, #efc9a0 100%);
+  background: linear-gradient(135deg, #111827, #6b7280, #efc9a0, #111827);
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
 }
 
 .media-5 {
-  background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)),
-    linear-gradient(135deg, #0f172a 0%, #155e75 55%, #27364d 100%);
+  background: linear-gradient(135deg, #0f172a, #155e75, #27364d, #0f172a);
+  background-size: 300% 300%;
+  animation: gradientShift 14s ease infinite;
 }
 
 .recent-card h3 {
