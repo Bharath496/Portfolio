@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,19 +19,20 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css?v=5" />
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.3/build/spline-viewer.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body>
     <nav class="side-rail" aria-label="Section navigation">
       <a href="#home" aria-label="Home" title="Home">
         <i class="fa-solid fa-house"></i>
       </a>
-      <a href="#case-studies" aria-label="Projects" title="Projects">
+      <a href="#case-studies" aria-label="Mini Projects" title="Mini Projects">
         <i class="fa-solid fa-briefcase"></i>
       </a>
       <a href="#approach" aria-label="My Approach" title="My Approach">
         <i class="fa-solid fa-comment-dots"></i>
+      </a>
+      <a href="#recent-work" aria-label="Recent work" title="Recent work">
+        <i class="fa-solid fa-folder-open"></i>
       </a>
       <a href="#contact" aria-label="Get In Touch" title="Get In Touch">
         <i class="fa-solid fa-paper-plane"></i>
@@ -57,7 +58,7 @@
               <img
                 id="hero-img-preview"
                 src="assets/me-hero.jpg"
-                alt="BHARATH K"
+                alt="BHARATH K portrait"
                 loading="eager"
                 fetchpriority="high"
               />
@@ -67,28 +68,13 @@
         </div>
 
         <div class="container worked-with" data-reveal>
-          <div class="section-heading left">
-            <h2>Worked with</h2>
-          </div>
-
+          <p>Worked with</p>
           <div class="worked-grid" aria-label="Skills and tools">
-            <div style="--i:0">Python</div>
-            <div style="--i:1">Java</div>
-            <div style="--i:2">C</div>
-            <div style="--i:3">HTML</div>
-            <div style="--i:4">CSS</div>
-            <div style="--i:5">JavaScript</div>
-            <div style="--i:6">React <small>(Learning)</small></div>
-            <div style="--i:7">SQL</div>
-            <div style="--i:8">MySQL</div>
-            <div style="--i:9">Power BI</div>
-            <div style="--i:10">Excel</div>
-            <div style="--i:11">Pandas / NumPy</div>
-            <div style="--i:12">Applied ML</div>
-            <div style="--i:13">Git</div>
-            <div style="--i:14">Cloudflare Pages</div>
-            <div style="--i:15">Hugging Face Spaces</div>
-            <div style="--i:16">VS Code</div>
+            <div>Python</div>
+            <div>SQL</div>
+            <div>Data Science</div>
+            <div>Machine Learning</div>
+            <div>Local AI</div>
           </div>
         </div>
       </section>
@@ -96,7 +82,7 @@
       <section class="section-light" id="case-studies">
         <div class="container">
           <div class="section-heading center" data-reveal>
-            <h2>Projects</h2>
+            <h2>Mini Projects</h2>
             <p>
               Solving user and business problems through data, experimentation,
               and clear product thinking.
@@ -107,9 +93,12 @@
             <article class="case-row" data-reveal>
               <div class="case-copy">
                 <span class="pill orange">AI</span>
-                <h3 class="project-title">AI Assistant</h3>
-                <p class="project-desc">A privacy-aware assistant concept centered on local inference, fast response, and a minimal interaction model.</p>
-                <span class="button orange-btn">Explore project &gt;</span>
+                <h3>AI Assistant</h3>
+                <p>
+                  A privacy-aware assistant concept centered on local inference,
+                  fast response, and a minimal interaction model.
+                </p>
+                <a class="button orange-btn" href="https://aiass-akx.pages.dev" target="_blank" rel="noreferrer">Explore project &gt;</a>
               </div>
               <div class="case-media media-1" aria-hidden="true">
                 <img
@@ -122,21 +111,34 @@
 
             <article class="case-row reverse" data-reveal>
               <div class="case-copy">
-                <span class="pill blue">Web</span>
-                <h3 class="project-title">Animekin</h3>
-                <p class="project-desc">An anime discovery platform — browse trending titles, filter by genre, watch trailers, and explore voice casts. Powered by AniList.</p>
-                <a class="button blue-btn" href="https://bharath496.github.io/Animekin/" target="_blank" rel="noreferrer">Explore project &gt;</a>
+                <span class="pill blue">Data</span>
+                <h3>Student Data Dashboard</h3>
+                <p>
+                  A dashboard idea for turning academic or survey data into
+                  readable insights using SQL and visual patterns.
+                </p>
+                <a class="button blue-btn" href="https://br496-know-envi-student-dashboard.hf.space/" target="_blank" rel="noreferrer">Explore project &gt;</a>
               </div>
               <div class="case-media media-2" aria-hidden="true">
-                <video
-                  src="assets/ANIMEKIN.mp4"
-                  autoplay
-                  muted
-                  loop
-                  playsinline
-                  preload="auto"
-                ></video>
+                <img
+                  src="assets/student-dashboard.svg"
+                  alt=""
+                  loading="lazy"
+                />
               </div>
+            </article>
+
+            <article class="case-row" data-reveal>
+              <div class="case-copy">
+                <span class="pill amber">Research</span>
+                <h3>Deep Learning Explorer</h3>
+                <p>
+                  A workspace for testing models, comparing outcomes, and keeping
+                  experiments organized and readable.
+                </p>
+                <a class="button amber-btn" href="#contact">Explore project &gt;</a>
+              </div>
+              <div class="case-media media-3" aria-hidden="true"></div>
             </article>
           </div>
         </div>
@@ -151,9 +153,6 @@
 
           <div class="approach-grid">
             <article class="approach-card" data-reveal>
-              <div class="spline-container">
-                <spline-viewer url="https://prod.spline.design/bgQrw6surLMhGiQ2/scene.splinecode"></spline-viewer>
-              </div>
               <p>
                 Clear problem framing, structured data thinking, and a focus on
                 practical outcomes.
@@ -161,9 +160,6 @@
               <span>AI / ML Direction</span>
             </article>
             <article class="approach-card" data-reveal>
-              <div class="spline-container">
-                <spline-viewer url="https://prod.spline.design/1ehw89-wvklNSVMD/scene.splinecode"></spline-viewer>
-              </div>
               <p>
                 Simple interfaces, readable models, and work that does not add
                 unnecessary noise.
@@ -171,9 +167,6 @@
               <span>User-Centric Approach</span>
             </article>
             <article class="approach-card" data-reveal>
-              <div class="spline-container">
-                <spline-viewer url="https://prod.spline.design/5D6U5bQS-bX1cnpu/scene.splinecode"></spline-viewer>
-              </div>
               <p>
                 Learning deeply, building steadily, and keeping the product
                 experience clear.
@@ -184,7 +177,42 @@
         </div>
       </section>
 
+      <section class="section-light recent-work" id="recent-work">
+        <div class="container">
+          <div class="section-heading center" data-reveal>
+            <h2>Recent Work</h2>
+            <p>
+              A look at the kinds of projects and systems I want to keep
+              building.
+            </p>
+          </div>
 
+          <div class="slider-frame" data-reveal>
+            <button class="slider-arrow" type="button" aria-label="Previous work">&lt;</button>
+
+            <div class="recent-grid">
+              <article class="recent-card">
+                <div class="recent-media media-4"></div>
+                <h3>AI Workflow Dashboard</h3>
+                <p>
+                  A clean interface for tracking model inputs, outputs, and
+                  iteration notes.
+                </p>
+              </article>
+              <article class="recent-card">
+                <div class="recent-media media-5"></div>
+                <h3>SQL Insights Board</h3>
+                <p>
+                  A structured way to surface useful metrics from raw data and
+                  make them easy to read.
+                </p>
+              </article>
+            </div>
+
+            <button class="slider-arrow" type="button" aria-label="Next work">&gt;</button>
+          </div>
+        </div>
+      </section>
 
       <section class="section-dark contact-section" id="contact">
         <div class="container">

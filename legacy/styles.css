@@ -1,12 +1,12 @@
-:root {
+﻿:root {
   --bg-dark: #080808;
   --bg-light: #ffffff;
   --panel-dark: #1a1a1a;
   --panel-dark-2: #222222;
   --text-dark: #f5f5f5;
   --text-light: #101010;
-  --muted-dark: #cccccc;
-  --muted-light: #333333;
+  --muted-dark: #9a9a9a;
+  --muted-light: #6f6f6f;
   --line-dark: rgba(255, 255, 255, 0.08);
   --line-light: rgba(0, 0, 0, 0.08);
   --green: #53a300;
@@ -117,13 +117,11 @@ h4 {
 
 .section-dark {
   background: var(--bg-dark);
-  padding: 60px 0;
 }
 
 .section-light {
   background: var(--bg-light);
   color: var(--text-light);
-  padding: 70px 0;
 }
 
 .hero {
@@ -181,7 +179,6 @@ h4 {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
   transition: transform 180ms ease, box-shadow 180ms ease;
   animation: pulseGlow 3s infinite alternate;
-  will-change: box-shadow;
 }
 
 .cta:hover,
@@ -245,7 +242,12 @@ h4 {
 
 .worked-with {
   padding-top: 14px;
-  padding-bottom: 40px;
+}
+
+.worked-with p {
+  font-family: "IBM Plex Mono", monospace;
+  color: #e8e8e8;
+  margin-bottom: 18px;
 }
 
 .worked-grid {
@@ -268,13 +270,6 @@ h4 {
   cursor: default;
 }
 
-.worked-grid div small {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.7rem;
-  opacity: 0.7;
-  margin-left: 6px;
-}
-
 .worked-grid div:hover {
   color: #ffffff;
   border-color: rgba(83, 163, 0, 0.5);
@@ -291,39 +286,6 @@ h4 {
   text-align: center;
 }
 
-.section-heading.left {
-  text-align: left;
-}
-
-/* Worked with section animations */
-.worked-with .section-heading h2 {
-  opacity: 0;
-  transform: translateX(-48px);
-  transition: opacity 1.4s ease, transform 1.4s ease;
-}
-
-.worked-with.is-visible .section-heading h2 {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-@keyframes skillIn {
-  from {
-    opacity: 0;
-    transform: translateY(24px) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-.worked-with.is-visible .worked-grid div {
-  opacity: 1;
-  animation: skillIn 1.2s ease both;
-  animation-delay: calc(var(--i) * 120ms);
-}
-
 .section-heading h2 {
   font-size: clamp(2.2rem, 5vw, 3.8rem);
   color: inherit;
@@ -334,7 +296,7 @@ h4 {
   max-width: 720px;
   font-family: "IBM Plex Mono", monospace;
   color: inherit;
-  opacity: 0.85;
+  opacity: 0.7;
   font-size: 1rem;
 }
 
@@ -404,28 +366,13 @@ h4 {
   color: #111111;
 }
 
-/* Project title slide animation */
-.project-title {
-  display: inline-block;
-  opacity: 0;
-  transform: translateX(-60px);
-  transition: opacity 1.8s ease, transform 1.8s ease;
-}
-
-.is-visible .project-title {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 .case-copy p {
   margin-top: 18px;
   max-width: 52ch;
   font-family: "IBM Plex Mono", monospace;
-  color: #1a1a1a;
+  color: #4a4a4a;
   font-size: 1rem;
 }
-
-
 
 .button {
   display: inline-flex;
@@ -466,13 +413,10 @@ h4 {
   overflow: hidden;
   min-height: 320px;
   box-shadow: var(--shadow-card);
-  will-change: transform;
 }
 
 .case-media img,
-.recent-media img,
-.case-media video,
-.recent-media video {
+.recent-media img {
   width: 100%;
   height: 100%;
   display: block;
@@ -497,11 +441,6 @@ h4 {
   background: #f4f6ff;
 }
 
-.media-2 video {
-  object-fit: cover;
-  background: #0b0f1a;
-}
-
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -512,7 +451,6 @@ h4 {
   background: linear-gradient(135deg, #1f1f1f, #4a5568, #9b6b4d, #1f1f1f);
   background-size: 300% 300%;
   animation: gradientShift 10s ease infinite;
-  will-change: background-position;
 }
 
 .approach-grid {
@@ -528,44 +466,11 @@ h4 {
   border-radius: 12px;
   padding: 24px;
   box-shadow: var(--shadow-card);
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  will-change: transform;
-}
-
-.spline-container {
-  width: calc(100% + 48px);
-  height: 350px;
-  margin: -24px -24px 20px -24px;
-  border-radius: 12px 12px 0 0;
-  overflow: hidden;
-  background: transparent;
-  position: relative;
-}
-
-/* Hides the Built with Spline logo by pushing it out of the container bounds */
-.spline-container spline-viewer {
-  width: 100%;
-  height: calc(100% + 60px);
-  display: block;
-  pointer-events: none; /* Prevents scroll zoom and camera dragging */
-}
-
-/* Force 1920x1080 rendering for the first scene because it breaks at small native resolutions */
-.approach-card:nth-child(1) spline-viewer {
-  width: 1920px !important;
-  height: 1080px !important;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /* Increased scale to zoom in on the robot and fill the padding */
-  transform: translate(-50%, -50%) scale(0.8);
 }
 
 .approach-card p {
   font-family: "IBM Plex Mono", monospace;
-  color: #333333;
+  color: #5c5c5c;
   min-height: 120px;
 }
 
@@ -617,14 +522,12 @@ h4 {
   background: linear-gradient(135deg, #111827, #6b7280, #efc9a0, #111827);
   background-size: 300% 300%;
   animation: gradientShift 12s ease infinite;
-  will-change: background-position;
 }
 
 .media-5 {
   background: linear-gradient(135deg, #0f172a, #155e75, #27364d, #0f172a);
   background-size: 300% 300%;
   animation: gradientShift 14s ease infinite;
-  will-change: background-position;
 }
 
 .recent-card h3 {
@@ -772,8 +675,8 @@ h4 {
 
 [data-reveal] {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 800ms ease, transform 800ms ease;
+  transform: translateY(14px);
+  transition: opacity 500ms ease, transform 500ms ease;
 }
 
 [data-reveal].is-visible {
