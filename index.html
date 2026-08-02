@@ -23,21 +23,6 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body>
-    <nav class="side-rail" aria-label="Section navigation">
-      <a href="#home" aria-label="Home" title="Home">
-        <i class="fa-solid fa-house"></i>
-      </a>
-      <a href="#case-studies" aria-label="Projects" title="Projects">
-        <i class="fa-solid fa-briefcase"></i>
-      </a>
-      <a href="#approach" aria-label="My Approach" title="My Approach">
-        <i class="fa-solid fa-comment-dots"></i>
-      </a>
-      <a href="#contact" aria-label="Get In Touch" title="Get In Touch">
-        <i class="fa-solid fa-paper-plane"></i>
-      </a>
-    </nav>
-
     <main>
       <section class="hero section-dark" id="home">
         <div class="container hero-grid">
@@ -71,24 +56,63 @@
             <h2>Worked with</h2>
           </div>
 
-          <div class="worked-grid" aria-label="Skills and tools">
-            <div style="--i:0">Python</div>
-            <div style="--i:1">Java</div>
-            <div style="--i:2">C</div>
-            <div style="--i:3">HTML</div>
-            <div style="--i:4">CSS</div>
-            <div style="--i:5">JavaScript</div>
-            <div style="--i:6">React <small>(Learning)</small></div>
-            <div style="--i:7">SQL</div>
-            <div style="--i:8">MySQL</div>
-            <div style="--i:9">Power BI</div>
-            <div style="--i:10">Excel</div>
-            <div style="--i:11">Pandas / NumPy</div>
-            <div style="--i:12">Applied ML</div>
-            <div style="--i:13">Git</div>
-            <div style="--i:14">Cloudflare Pages</div>
-            <div style="--i:15">Hugging Face Spaces</div>
-            <div style="--i:16">VS Code</div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Languages</h3>
+            <div class="worked-grid" aria-label="Languages">
+              <div style="--i:0">Python</div>
+              <div style="--i:1">Java</div>
+              <div style="--i:2">C</div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Frontend</h3>
+            <div class="worked-grid" aria-label="Frontend">
+              <div style="--i:0">HTML</div>
+              <div style="--i:1">CSS</div>
+              <div style="--i:2">JavaScript</div>
+              <div style="--i:3">React <small>(Learning)</small></div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Machine Learning</h3>
+            <div class="worked-grid" aria-label="Machine Learning">
+              <div style="--i:0">Scikit-learn</div>
+              <div style="--i:1">TensorFlow</div>
+              <div style="--i:2">PyTorch</div>
+              <div style="--i:3">Pandas</div>
+              <div style="--i:4">NumPy</div>
+              <div style="--i:5">Matplotlib</div>
+              <div style="--i:6">Seaborn</div>
+              <div style="--i:7">OpenCV</div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Data & BI</h3>
+            <div class="worked-grid" aria-label="Data and BI">
+              <div style="--i:0">Power BI</div>
+              <div style="--i:1">Excel</div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Databases</h3>
+            <div class="worked-grid" aria-label="Databases">
+              <div style="--i:0">MySQL</div>
+              <div style="--i:1">SQL</div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Tools</h3>
+            <div class="worked-grid" aria-label="Tools">
+              <div style="--i:0">Git</div>
+              <div style="--i:1">VS Code</div>
+              <div style="--i:2">Cloudflare Pages</div>
+              <div style="--i:3">Hugging Face Spaces</div>
+            </div>
           </div>
         </div>
       </section>
@@ -106,10 +130,9 @@
           <div class="case-studies">
             <article class="case-row" data-reveal>
               <div class="case-copy">
-                <span class="pill orange">AI</span>
-                <h3 class="project-title">AI Assistant</h3>
+                <h3 class="project-title">AI Assistant <img src="assets/icon-ai.jpg" alt="" class="project-icon" /></h3>
                 <p class="project-desc">A privacy-aware assistant concept centered on local inference, fast response, and a minimal interaction model.</p>
-                <span class="button orange-btn">Explore project &gt;</span>
+                <a class="button orange-btn" href="https://4142be0b.aiass-5xd.pages.dev/" target="_blank" rel="noreferrer">Explore project &gt;</a>
               </div>
               <div class="case-media media-1" aria-hidden="true">
                 <img
@@ -122,8 +145,7 @@
 
             <article class="case-row reverse" data-reveal>
               <div class="case-copy">
-                <span class="pill blue">Web</span>
-                <h3 class="project-title">Animekin</h3>
+                <h3 class="project-title">Animekin <img src="assets/icon-anime.png" alt="" class="project-icon" /></h3>
                 <p class="project-desc">An anime discovery platform — browse trending titles, filter by genre, watch trailers, and explore voice casts. Powered by AniList.</p>
                 <a class="button blue-btn" href="https://bharath496.github.io/Animekin/" target="_blank" rel="noreferrer">Explore project &gt;</a>
               </div>
@@ -151,8 +173,8 @@
 
           <div class="approach-grid">
             <article class="approach-card" data-reveal>
-              <div class="spline-container">
-                <spline-viewer url="https://prod.spline.design/bgQrw6surLMhGiQ2/scene.splinecode"></spline-viewer>
+              <div class="approach-img">
+                <img src="assets/illustration-robot.jpg" alt="" loading="lazy" />
               </div>
               <p>
                 Clear problem framing, structured data thinking, and a focus on
@@ -161,8 +183,8 @@
               <span>AI / ML Direction</span>
             </article>
             <article class="approach-card" data-reveal>
-              <div class="spline-container">
-                <spline-viewer url="https://prod.spline.design/1ehw89-wvklNSVMD/scene.splinecode"></spline-viewer>
+              <div class="approach-img">
+                <img src="assets/illustration-user.jpg" alt="" loading="lazy" />
               </div>
               <p>
                 Simple interfaces, readable models, and work that does not add
@@ -171,8 +193,8 @@
               <span>User-Centric Approach</span>
             </article>
             <article class="approach-card" data-reveal>
-              <div class="spline-container">
-                <spline-viewer url="https://prod.spline.design/5D6U5bQS-bX1cnpu/scene.splinecode"></spline-viewer>
+              <div class="approach-img">
+                <img src="assets/illustration-developer.jpg" alt="" loading="lazy" />
               </div>
               <p>
                 Learning deeply, building steadily, and keeping the product

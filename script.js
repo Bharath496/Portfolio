@@ -11,6 +11,30 @@ if ("IntersectionObserver" in window) {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
           
+          // Staggered reveal for approach cards — each with unique entrance
+          const approachCards = document.querySelectorAll('.approach-card[data-reveal]');
+          if (entry.target.classList.contains('approach-card')) {
+            const index = Array.from(approachCards).indexOf(entry.target);
+            const animations = [
+              { opacity: 0, transform: 'translateX(-60px) rotate(-4deg)', filter: 'blur(6px)' },
+              { opacity: 0, transform: 'translateY(50px) scale(0.85)', filter: 'blur(6px)' },
+              { opacity: 0, transform: 'translateX(60px) rotate(4deg)', filter: 'blur(6px)' }
+            ];
+            const card = entry.target;
+            const anim = animations[index] || animations[0];
+            // Set starting state
+            card.style.opacity = anim.opacity;
+            card.style.transform = anim.transform;
+            card.style.filter = anim.filter;
+            // Force reflow then animate to visible
+            requestAnimationFrame(() => {
+              card.classList.add('is-visible');
+              card.style.opacity = '';
+              card.style.transform = '';
+              card.style.filter = '';
+            });
+          }
+
           // Trigger typewriter effect for project descriptions
           const typeDesc = entry.target.querySelector('.project-desc');
           if (typeDesc && !typeDesc.classList.contains('typing')) {
