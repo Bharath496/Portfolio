@@ -10,6 +10,55 @@ if ("IntersectionObserver" in window) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
+          
+          // Staggered reveal for approach cards — each with unique entrance
+          const approachCards = document.querySelectorAll('.approach-card[data-reveal]');
+          if (entry.target.classList.contains('approach-card')) {
+            const index = Array.from(approachCards).indexOf(entry.target);
+            const animations = [
+              { opacity: 0, transform: 'translateX(-60px) rotate(-4deg)', filter: 'blur(6px)' },
+              { opacity: 0, transform: 'translateY(50px) scale(0.85)', filter: 'blur(6px)' },
+              { opacity: 0, transform: 'translateX(60px) rotate(4deg)', filter: 'blur(6px)' }
+            ];
+            const card = entry.target;
+            const anim = animations[index] || animations[0];
+            // Set starting state
+            card.style.opacity = anim.opacity;
+            card.style.transform = anim.transform;
+            card.style.filter = anim.filter;
+            // Force reflow then animate to visible
+            requestAnimationFrame(() => {
+              card.classList.add('is-visible');
+              card.style.opacity = '';
+              card.style.transform = '';
+              card.style.filter = '';
+            });
+          }
+
+          // Trigger typewriter effect for project descriptions
+          const typeDesc = entry.target.querySelector('.project-desc');
+          if (typeDesc && !typeDesc.classList.contains('typing')) {
+            const originalText = typeDesc.textContent.trim();
+            if (originalText.length > 0) {
+              typeDesc.classList.add('typing');
+              typeDesc.textContent = ''; // clear it to start typing
+              let charIndex = 0;
+              const type = () => {
+                if (charIndex < originalText.length) {
+                  typeDesc.textContent += originalText.charAt(charIndex);
+                  charIndex++;
+                  setTimeout(type, 20); // slightly faster typing
+                } else {
+                  setTimeout(() => {
+                    typeDesc.classList.remove('typing');
+                  }, 2000); // leave cursor blinking for 2s after done
+                }
+              };
+              // Delay typing slightly so the slide-in animation starts first
+              setTimeout(type, 900);
+            }
+          }
+
           observer.unobserve(entry.target);
         }
       });
@@ -67,29 +116,63 @@ if (introElement) {
   setTimeout(typeWriter, 800);
 }
 
-// 3D Tilt Effect for project cards
-const tiltElements = document.querySelectorAll('.case-media, .recent-media, .approach-card');
-
-tiltElements.forEach(el => {
-  el.addEventListener('mousemove', e => {
-    const rect = el.getBoundingClientRect();
-    const x = e.clientX - rect.left; // x position within the element
-    const y = e.clientY - rect.top;  // y position within the element
-    
-    const xPct = x / rect.width - 0.5;
-    const yPct = y / rect.height - 0.5;
-    
-    const xRotation = yPct * -12; // max rotation degrees
-    const yRotation = xPct * 12;
-    
-    el.style.transform = `perspective(1000px) rotateX(${xRotation}deg) rotateY(${yRotation}deg) scale3d(1.02, 1.02, 1.02)`;
-    el.style.transition = 'none';
-    el.style.zIndex = '10';
+// Release skill card entry animation so hover transforms keep working
+const workedItems = document.querySelectorAll('.worked-grid div');
+workedItems.forEach(el => {
+  el.addEventListener('animationend', () => {
+    el.style.animation = 'none';
   });
-  
+});
+
+// 3D Tilt Effect for project cards (throttled with rAF)
+const tiltElements = document.querySelectorAll('.case-media, .recent-media, .approach-card');
+tiltElements.forEach(el => {
+  let ticking = false;
+  let lastX = 0, lastY = 0;
+
+  el.addEventListener('mousemove', e => {
+    lastX = e.clientX;
+    lastY = e.clientY;
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const rect = el.getBoundingClientRect();
+        const x = lastX - rect.left;
+        const y = lastY - rect.top;
+
+        const xPct = x / rect.width - 0.5;
+        const yPct = y / rect.height - 0.5;
+
+        el.style.transform = `perspective(1000px) rotateX(${yPct * -12}deg) rotateY(${xPct * 12}deg) scale3d(1.02, 1.02, 1.02)`;
+        el.style.transition = 'none';
+        el.style.zIndex = '10';
+
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
   el.addEventListener('mouseleave', () => {
+    ticking = false;
     el.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
     el.style.transition = 'transform 0.5s ease';
     el.style.zIndex = '1';
   });
 });
+
+// Live clocks for Coimbatore & Germany
+(function initClocks() {
+  const footerYear = document.getElementById("year");
+  if (!footerYear) return;
+
+  function updateClocks() {
+    const now = new Date();
+    const opts = { weekday: "short", year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false };
+    const coimbatore = now.toLocaleString("en-IN", { ...opts, timeZone: "Asia/Kolkata" });
+    const germany = now.toLocaleString("en-DE", { ...opts, timeZone: "Europe/Berlin" });
+    footerYear.innerHTML = `Coimbatore ${coimbatore} &nbsp;·&nbsp; Germany ${germany}`;
+  }
+
+  updateClocks();
+  setInterval(updateClocks, 1000);
+})();

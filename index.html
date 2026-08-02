@@ -19,26 +19,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css?v=5" />
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.3/build/spline-viewer.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body>
-    <nav class="side-rail" aria-label="Section navigation">
-      <a href="#home" aria-label="Home" title="Home">
-        <i class="fa-solid fa-house"></i>
-      </a>
-      <a href="#case-studies" aria-label="Mini Projects" title="Mini Projects">
-        <i class="fa-solid fa-briefcase"></i>
-      </a>
-      <a href="#approach" aria-label="My Approach" title="My Approach">
-        <i class="fa-solid fa-comment-dots"></i>
-      </a>
-      <a href="#recent-work" aria-label="Recent work" title="Recent work">
-        <i class="fa-solid fa-folder-open"></i>
-      </a>
-      <a href="#contact" aria-label="Get In Touch" title="Get In Touch">
-        <i class="fa-solid fa-paper-plane"></i>
-      </a>
-    </nav>
-
     <main>
       <section class="hero section-dark" id="home">
         <div class="container hero-grid">
@@ -58,7 +42,7 @@
               <img
                 id="hero-img-preview"
                 src="assets/me-hero.jpg"
-                alt="BHARATH K portrait"
+                alt="BHARATH K"
                 loading="eager"
                 fetchpriority="high"
               />
@@ -68,13 +52,67 @@
         </div>
 
         <div class="container worked-with" data-reveal>
-          <p>Worked with</p>
-          <div class="worked-grid" aria-label="Skills and tools">
-            <div>Python</div>
-            <div>SQL</div>
-            <div>Data Science</div>
-            <div>Machine Learning</div>
-            <div>Local AI</div>
+          <div class="section-heading left">
+            <h2>Worked with</h2>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Languages</h3>
+            <div class="worked-grid" aria-label="Languages">
+              <div style="--i:0">Python</div>
+              <div style="--i:1">Java</div>
+              <div style="--i:2">C</div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Frontend</h3>
+            <div class="worked-grid" aria-label="Frontend">
+              <div style="--i:0">HTML</div>
+              <div style="--i:1">CSS</div>
+              <div style="--i:2">JavaScript</div>
+              <div style="--i:3">React <small>(Learning)</small></div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Machine Learning</h3>
+            <div class="worked-grid" aria-label="Machine Learning">
+              <div style="--i:0">Scikit-learn</div>
+              <div style="--i:1">TensorFlow</div>
+              <div style="--i:2">PyTorch</div>
+              <div style="--i:3">Pandas</div>
+              <div style="--i:4">NumPy</div>
+              <div style="--i:5">Matplotlib</div>
+              <div style="--i:6">Seaborn</div>
+              <div style="--i:7">OpenCV</div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Data & BI</h3>
+            <div class="worked-grid" aria-label="Data and BI">
+              <div style="--i:0">Power BI</div>
+              <div style="--i:1">Excel</div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Databases</h3>
+            <div class="worked-grid" aria-label="Databases">
+              <div style="--i:0">MySQL</div>
+              <div style="--i:1">SQL</div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Tools</h3>
+            <div class="worked-grid" aria-label="Tools">
+              <div style="--i:0">Git</div>
+              <div style="--i:1">VS Code</div>
+              <div style="--i:2">Cloudflare Pages</div>
+              <div style="--i:3">Hugging Face Spaces</div>
+            </div>
           </div>
         </div>
       </section>
@@ -82,7 +120,7 @@
       <section class="section-light" id="case-studies">
         <div class="container">
           <div class="section-heading center" data-reveal>
-            <h2>Mini Projects</h2>
+            <h2>Projects</h2>
             <p>
               Solving user and business problems through data, experimentation,
               and clear product thinking.
@@ -92,13 +130,9 @@
           <div class="case-studies">
             <article class="case-row" data-reveal>
               <div class="case-copy">
-                <span class="pill orange">AI</span>
-                <h3>AI Assistant</h3>
-                <p>
-                  A privacy-aware assistant concept centered on local inference,
-                  fast response, and a minimal interaction model.
-                </p>
-                <a class="button orange-btn" href="https://aiass-akx.pages.dev" target="_blank" rel="noreferrer">Explore project &gt;</a>
+                <h3 class="project-title">AI Assistant <img src="assets/icon-ai.jpg" alt="" class="project-icon" /></h3>
+                <p class="project-desc">A privacy-aware assistant concept centered on local inference, fast response, and a minimal interaction model.</p>
+                <a class="button orange-btn" href="https://4142be0b.aiass-5xd.pages.dev/" target="_blank" rel="noreferrer">Explore project &gt;</a>
               </div>
               <div class="case-media media-1" aria-hidden="true">
                 <img
@@ -111,34 +145,20 @@
 
             <article class="case-row reverse" data-reveal>
               <div class="case-copy">
-                <span class="pill blue">Data</span>
-                <h3>Student Data Dashboard</h3>
-                <p>
-                  A dashboard idea for turning academic or survey data into
-                  readable insights using SQL and visual patterns.
-                </p>
-                <a class="button blue-btn" href="https://br496-know-envi-student-dashboard.hf.space/" target="_blank" rel="noreferrer">Explore project &gt;</a>
+                <h3 class="project-title">Animekin <img src="assets/icon-anime.png" alt="" class="project-icon" /></h3>
+                <p class="project-desc">An anime discovery platform — browse trending titles, filter by genre, watch trailers, and explore voice casts. Powered by AniList.</p>
+                <a class="button blue-btn" href="https://bharath496.github.io/Animekin/" target="_blank" rel="noreferrer">Explore project &gt;</a>
               </div>
               <div class="case-media media-2" aria-hidden="true">
-                <img
-                  src="assets/student-dashboard.svg"
-                  alt=""
-                  loading="lazy"
-                />
+                <video
+                  src="assets/ANIMEKIN.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="auto"
+                ></video>
               </div>
-            </article>
-
-            <article class="case-row" data-reveal>
-              <div class="case-copy">
-                <span class="pill amber">Research</span>
-                <h3>Deep Learning Explorer</h3>
-                <p>
-                  A workspace for testing models, comparing outcomes, and keeping
-                  experiments organized and readable.
-                </p>
-                <a class="button amber-btn" href="#contact">Explore project &gt;</a>
-              </div>
-              <div class="case-media media-3" aria-hidden="true"></div>
             </article>
           </div>
         </div>
@@ -153,6 +173,9 @@
 
           <div class="approach-grid">
             <article class="approach-card" data-reveal>
+              <div class="approach-img">
+                <img src="assets/illustration-robot.jpg" alt="" loading="lazy" />
+              </div>
               <p>
                 Clear problem framing, structured data thinking, and a focus on
                 practical outcomes.
@@ -160,6 +183,9 @@
               <span>AI / ML Direction</span>
             </article>
             <article class="approach-card" data-reveal>
+              <div class="approach-img">
+                <img src="assets/illustration-user.jpg" alt="" loading="lazy" />
+              </div>
               <p>
                 Simple interfaces, readable models, and work that does not add
                 unnecessary noise.
@@ -167,6 +193,9 @@
               <span>User-Centric Approach</span>
             </article>
             <article class="approach-card" data-reveal>
+              <div class="approach-img">
+                <img src="assets/illustration-developer.jpg" alt="" loading="lazy" />
+              </div>
               <p>
                 Learning deeply, building steadily, and keeping the product
                 experience clear.
@@ -177,42 +206,7 @@
         </div>
       </section>
 
-      <section class="section-light recent-work" id="recent-work">
-        <div class="container">
-          <div class="section-heading center" data-reveal>
-            <h2>Recent Work</h2>
-            <p>
-              A look at the kinds of projects and systems I want to keep
-              building.
-            </p>
-          </div>
 
-          <div class="slider-frame" data-reveal>
-            <button class="slider-arrow" type="button" aria-label="Previous work">&lt;</button>
-
-            <div class="recent-grid">
-              <article class="recent-card">
-                <div class="recent-media media-4"></div>
-                <h3>AI Workflow Dashboard</h3>
-                <p>
-                  A clean interface for tracking model inputs, outputs, and
-                  iteration notes.
-                </p>
-              </article>
-              <article class="recent-card">
-                <div class="recent-media media-5"></div>
-                <h3>SQL Insights Board</h3>
-                <p>
-                  A structured way to surface useful metrics from raw data and
-                  make them easy to read.
-                </p>
-              </article>
-            </div>
-
-            <button class="slider-arrow" type="button" aria-label="Next work">&gt;</button>
-          </div>
-        </div>
-      </section>
 
       <section class="section-dark contact-section" id="contact">
         <div class="container">
